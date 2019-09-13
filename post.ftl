@@ -136,6 +136,12 @@
             </div>
         </div>
     </div>
+    <script>
+    const zooming = new Zooming()
+    for (var node of document.querySelectorAll('#post-content img')) {
+        zooming.listen(node)
+    }
+    </script>
 <#include "comment.ftl">
 <@comment post=post type="post" />
 <#include "footer.ftl">

@@ -13,7 +13,7 @@
                     </div>
                     <div class="post-header-thumb-meta">
                         <time datetime="${post.createTime}" itemprop="datePublished">
-                            发布于 ${post.createTime?string('yyyy, MMM d')}
+                            发布于 ${post.createTime?string('yyyy年 MMM d')}
                         </time>
                         in
                         <#if post.categories?? && post.categories?size gt 0>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="post-header-thumb-meta">
                         <time datetime="${post.createTime}" itemprop="datePublished">
-                            发布于 ${post.createTime?string('yyyy, MMM d')}
+                            发布于 ${post.createTime?string('yyyy年 MMM d')}
                         </time>
                         in
                         <#if post.categories?? && post.categories?size gt 0>
@@ -72,7 +72,7 @@
             </h1>
             <div class="post-data">
                 <time datetime="${post.createTime}" itemprop="datePublished">
-                    发布于 ${post.createTime?string('yyyy, MMM d')}
+                    发布于 ${post.createTime?string('yyyy年 MMM d')}
                 </time>
                 <#if comments.totalElements gt 0>
                     / <a href="#comments">${comments.totalElements!0} 条评论</a>
@@ -90,7 +90,7 @@
             ${post.formatContent!}
             <p class="post-info">
                 本文由 <a href="${context!}/"><b>${user.nickname!}</b></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a>
-                国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: ${post.editTime?string('MMM d,yyyy')}
+                国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: ${post.editTime?string('yyyy年 MMM d')}
             </p>
         </div>
     </article>

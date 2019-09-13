@@ -4,7 +4,7 @@
 <div class="main-content common-page clearfix">
     <div class="common-item">
         <div class="common-title">
-            Search : ${keyword}
+            搜索：${keyword}
 		</div>
         <div class="post-lists">
 			<div class="post-lists-body">

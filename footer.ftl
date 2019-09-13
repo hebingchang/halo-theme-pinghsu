@@ -243,6 +243,8 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="//cdnjs.loli.net/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </#if>
 
+<script src="//cdnjs.loli.net/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+
 <#-- 统计代码 -->
 <@statistics />
 

@@ -244,7 +244,14 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </#if>
 
 <script src="//cdnjs.loli.net/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    for (var node of document.querySelectorAll('#post-content img')) {
+        zooming.listen(node)
+    }
+})
+</script>
 <#-- 统计代码 -->
 <@statistics />
 

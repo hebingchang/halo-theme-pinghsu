@@ -33,6 +33,7 @@
                     </a>
 					<div class="info-text">
                     	<p>Theme is <a href="https://github.com/chakhsu/pinghsu" target="_blank">Pinghsu</a> by <a href="https://www.linpx.com/" target="_blank">Chakhsu</a></p>
+                    	<p>Modified by <a href="https://github.com/hebingchang/halo-theme-pinghsu" target="_blank">Boar</a></p>
 						<p>Powered by <a href="https://github.com/halo-dev/halo" target="_blank" rel="nofollow">Halo</a></p>
 						<p>&copy; ${.now?string("yyyy")} <a href="${context!}">${options.blog_title!}</a></p>
                         <p><@footer_info></@footer_info></p>
@@ -40,11 +41,11 @@
 				</div>
 			</div>
 			<div class="meta-item meta-posts">
-				<h3 class="meta-title">RECENT POSTS</h3>
+				<h3 class="meta-title">近期文章</h3>
                 <@fun.getRecentPosts 8/>
 			</div>
             <div class="meta-item meta-comments">
-                <h3 class="meta-title">RECENT COMMENTS</h3>
+                <h3 class="meta-title">近期评论</h3>
                 <@fun.getRecentComments 8 />
             </div>
 		</div>

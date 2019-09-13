@@ -13,13 +13,15 @@
                     </div>
                     <div class="post-header-thumb-meta">
                         <time datetime="${post.createTime}" itemprop="datePublished">
-                            Published on ${post.createTime?string('MMM d,yyyy')}
+                            发布于 ${post.createTime?string('yyyy, MMM d')}
                         </time>
                         in
                         <#if post.categories?? && post.categories?size gt 0>
                             <a href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
                         </#if>
-                        with<a href="#comments"> ${comments.totalElements} comment</a>
+                        <#if comments.totalElements gt 0>
+                            / <a href="#comments">${comments.totalElements} 条评论</a>
+                        </#if>
                     </div>
                     <div class="post-tags">
                         <#if tags?? && tags?size gt 0>
@@ -41,13 +43,15 @@
                     </div>
                     <div class="post-header-thumb-meta">
                         <time datetime="${post.createTime}" itemprop="datePublished">
-                            Published on ${post.createTime?string('MMM d,yyyy')}
+                            发布于 ${post.createTime?string('yyyy, MMM d')}
                         </time>
                         in
                         <#if post.categories?? && post.categories?size gt 0>
                             <a href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
                         </#if>
-                        with<a href="#comments"> ${comments.totalElements} comment</a>
+                        <#if comments.totalElements gt 0>
+                            / <a href="#comments">${comments.totalElements} 条评论</a>
+                        </#if>
                     </div>
                     <div class="post-tags">
                         <#if tags?? && tags?size gt 0>
@@ -68,13 +72,11 @@
             </h1>
             <div class="post-data">
                 <time datetime="${post.createTime}" itemprop="datePublished">
-                    Published on ${post.createTime?string('MMM d,yyyy')}
+                    发布于 ${post.createTime?string('yyyy, MMM d')}
                 </time>
-                in
-                <#if post.categories?? && post.categories?size gt 0>
-                    <a href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
+                <#if comments.totalElements gt 0>
+                    / <a href="#comments">${comments.totalElements!0} 条评论</a>
                 </#if>
-                with<a href="#comments"> ${comments.totalElements!0} comment</a>
             </div>
         </div>
         <div id="post-content" class="post-content" itemprop="articleBody">

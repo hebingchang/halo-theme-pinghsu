@@ -137,7 +137,6 @@
         </div>
     </div>
     <script>
-    const zooming = new Zooming()
     for (var node of document.querySelectorAll('#post-content img')) {
         zooming.listen(node)
     }

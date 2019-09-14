@@ -12,9 +12,9 @@
                     <div class="post-list-item" v-for="repo in repos">
                         <div class="post-list-item-container">
                             <div class="item-label">
-                                <div class="item-title"><a href="#">title</a></div>
+                                <div class="item-title"><a href="#">{{ repo.name }}</a></div>
                                 <div class="item-meta clearfix">
-                                    <div class="item-meta-date"> date </div>
+                                    <div class="item-meta-date">{{ repo.language }}</div>
                                 </div>
                             </div>
                         </div>
@@ -29,6 +29,15 @@ var app = new Vue({
   el: '#app',
   data: {
     repos: []
+  },
+  created () {
+    axios.get('https://api.github.com/users/hebingchang/repos')
+    .then((response) => {
+        this.repos = response.data
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
   }
 })
 </script>

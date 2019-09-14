@@ -12,7 +12,7 @@
                     <div class="post-list-item" v-for="repo in repos">
                         <div class="post-list-item-container">
                             <div class="item-label">
-                                <div class="item-title"><a href="#">{{ repo.name }}</a></div>
+                                <div class="item-title"><a :href="repo.html_url" target="_blank">{{ repo.name }}</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-date">{{ repo.language }}</div>
                                 </div>
@@ -33,8 +33,8 @@ var app = new Vue({
   created () {
     axios.get('https://api.github.com/users/hebingchang/repos')
     .then((response) => {
-        this.repos = response.data.filter(repo => !repo.fork).sort(function(a, b) {
-            return a.stargazers_count - b.stargazers_count;
+        this.repos = response.data.filter(repo => !repo.fork && repo.stargazers_count).sort(function(a, b) {
+            return b.stargazers_count - a.stargazers_count;
         });
     })
     .catch(function (error) {

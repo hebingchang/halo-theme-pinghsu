@@ -33,7 +33,9 @@ var app = new Vue({
   created () {
     axios.get('https://api.github.com/users/hebingchang/repos')
     .then((response) => {
-        this.repos = response.data
+        this.repos = response.data.filter(repo => !repo.fork).sort(function(a, b) {
+            return a.stargazers_count - b.stargazers_count;
+        });
     })
     .catch(function (error) {
         console.log(error);

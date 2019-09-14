@@ -26,7 +26,7 @@
     <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
     <link href="${static!}/source/css/style.min.css" rel="stylesheet">
     <script src="//cdnjs.loli.net/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-
+    <script>const zooming = new Zooming()</script>
     <!--[if lt IE 9]>
     <script src="//cdnjs.loli.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>

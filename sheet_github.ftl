@@ -30,7 +30,7 @@
             <div class="categorys-title">Contributions in last year</div>
             <div class="post-lists">
                 <div class="post-lists-body">
-                    <div id="contributions" style="width: 800px; height:400px;"></div>
+                    <div id="contributions" style="width: 100%; height: 400px;"></div>
                 </div>
             </div>
         </div>

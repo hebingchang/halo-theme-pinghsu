@@ -1,6 +1,4 @@
 
-var myChart = echarts.init(document.getElementById('contributions'));
-
 COLORS = ['#edeff2', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
 var today = new Date();
 var count = 0;
@@ -13,6 +11,8 @@ var app = new Vue({
   mounted () {
     axios.get('https://github-contributions-api.now.sh/v1/hebingchang')
     .then((response) => {
+        var myChart = echarts.init(document.getElementById('contributions'));
+
         var contributions = response.data.contributions.reverse();
         var data = [];
 

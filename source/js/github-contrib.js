@@ -10,17 +10,7 @@ var app = new Vue({
   data: {
     repos: []
   },
-  created () {
-    axios.get('https://api.github.com/users/hebingchang/repos')
-    .then((response) => {
-        this.repos = response.data.filter(repo => !repo.fork && repo.stargazers_count).sort(function(a, b) {
-            return b.stargazers_count - a.stargazers_count;
-        });
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
-
+  mounted () {
     axios.get('https://github-contributions-api.now.sh/v1/hebingchang')
     .then((response) => {
         var contributions = response.data.contributions.reverse();
@@ -102,5 +92,16 @@ var app = new Vue({
     .catch(function (error) {
         console.log(error);
     });
+  },
+  created () {
+    axios.get('https://api.github.com/users/hebingchang/repos')
+    .then((response) => {
+        this.repos = response.data.filter(repo => !repo.fork && repo.stargazers_count).sort(function(a, b) {
+            return b.stargazers_count - a.stargazers_count;
+        });
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
   }
 })

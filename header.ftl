@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="google-site-verification" content="ziO5nTSbkTh1y9Z21kbAnwqDPN25xw6olIsAbomE0kI" />
 
     <@globalHeader />
 

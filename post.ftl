@@ -142,6 +142,8 @@
         zooming.listen(node)
     }
     </script>
+    <script src="${static!}/source/js/music.js"></script>
+
 <#include "comment.ftl">
 <@comment post=post type="post" />
 <#include "footer.ftl">

@@ -270,7 +270,5 @@ InstantClick.init('mousedown');
 </script>
 </#if>
 
-<script src="${static!}/source/js/music.js"></script>
-
 </body>
 </html>

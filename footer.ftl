@@ -164,6 +164,8 @@ postDirectoryBuild();
 <script src="//cdnjs.loli.net/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
 </#if>
 
+<script src="//cdnjs.loli.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
 <script>
 
 <#if (settings.post_toc!false) && post??>

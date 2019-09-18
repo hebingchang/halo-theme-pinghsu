@@ -1,7 +1,6 @@
 <#include "header.ftl">
 <@header title="${post.title!} | ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@header>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/obelisk.js@1.2.2/build/obelisk.min.js"></script>
 <script src="https://cdnjs.loli.net/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
 <script src="${static!}/source/js/echarts-gl.min.js"></script>

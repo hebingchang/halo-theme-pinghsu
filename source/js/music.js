@@ -10,6 +10,7 @@ if (player !== null) {
             .then((res_lyric) => {
               const ap = new APlayer({
                 container: document.getElementById('aplayer'),
+                lrcType: 1,
                 audio: [
                   {
                     name: res_detail.data.songs[0].name,

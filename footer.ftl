@@ -148,8 +148,6 @@ postDirectoryBuild();
 </script>
 </#if>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
 <#--<?php $this->footer(); ?>-->
 <script src="//cdnjs.loli.net/ajax/libs/headroom/0.9.1/headroom.min.js"></script>
 
